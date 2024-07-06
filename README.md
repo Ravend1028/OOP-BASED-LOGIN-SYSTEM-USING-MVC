@@ -1,2 +1,2 @@
 # OOP-Based-Login-System-Using-MVC
-OOP-BASED LOGIN SYSTEM USING MVC - BOOTSTRAP + PHP
+This project is a robust and secure login system built using object-oriented programming (OOP) principles and the Model-View-Controller (MVC) architecture. The system is designed to provide a secure authentication mechanism for web applications. It utilizes PHP for server-side processing, MySQL for database management, and Bootstrap for responsive, user-friendly front-end design.
