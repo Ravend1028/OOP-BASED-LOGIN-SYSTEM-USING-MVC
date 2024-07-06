@@ -1,0 +1,34 @@
+Hierarchy:
+
+Dbh (CLASS)
+-Connection to Db
+
+Signup Part:
+
+Signup Model extends Dbh (CLASS)
+- Queries to Db
+
+Signup Cntrller extends Model (CLASS)
+- Properties & Constructor
+- Validation Functions
+
+Signup (INCS)
+- Collect POSTS
+- Controller Obj
+- Run Obj Signup Function
+
+Login Part:
+
+Login Model extends Dbh (CLASS)
+- Queries to Db
+
+Login Cntrller extends Model (CLASS)
+- Empty Validation
+
+Login(INCS)
+- Collect POSTS
+- Controller Obj
+- Run Obj Login Function
+
+Logout(INCS)
+- Session Handling
