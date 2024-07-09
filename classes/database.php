@@ -1,6 +1,7 @@
 <?php
 
 class Dbh {
+  // Change the variable value, when using to your local machine.
   private $servername = "localhost";
   private $username = "raven";
   private $password = "123456";
