@@ -14,7 +14,6 @@
   $signupController->signupUser();
 
   header('location: ../index.php?error=none');
-
-}
+  }
 
 ?>

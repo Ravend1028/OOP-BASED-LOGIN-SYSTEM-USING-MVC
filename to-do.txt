@@ -1,0 +1,5 @@
+- login form
+- broken php tag to check if session start
+- if start, show login, else, show sign 
+- or make it dynamic by adding js??
+- fuckk sleep muna ako

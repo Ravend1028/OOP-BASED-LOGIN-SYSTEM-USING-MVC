@@ -1,5 +1,9 @@
 <?php include 'includes/autoloader.php'; ?>
 
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +15,7 @@
 
 </head>
 <body class="bg-dark">
-  
+
   <main class="p-5">
     <div class="container">
       <div class="row d-flex justify-content-center align-items-center">
