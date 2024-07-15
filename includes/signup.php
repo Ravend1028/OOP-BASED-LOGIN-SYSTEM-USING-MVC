@@ -11,6 +11,10 @@
   $repassword = $_POST['repassword'];
 
   $signupController = new SignupController($username, $email, $firstname, $lastname, $password, $repassword);
- }
+  $signupController->signupUser();
+
+  header('location: ../index.php?error=none');
+
+}
 
 ?>

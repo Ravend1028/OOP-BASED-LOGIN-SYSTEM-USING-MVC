@@ -1,11 +1,11 @@
 <?php
 
-class Dbh {
+class Database {
   // Change the variable value, when using to your local machine.
   private $servername = "localhost";
   private $username = "raven";
   private $password = "123456";
-  private $dbname = "";
+  private $dbname = "login-system";
 
   protected function connect() {
     $dsn = 'mysql:host=' . $this->servername . ';dbname=' . $this->dbname;

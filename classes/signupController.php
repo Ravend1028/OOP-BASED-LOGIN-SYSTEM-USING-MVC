@@ -18,11 +18,69 @@ class SignupController extends SignupModel {
   }
 
   public function signupUser() {
-    // RUN ALL VALIDATIONS HERE
-    // IF NO ERRORS, THEN RUN MODEL QUERY TO INSERT
+    if($this->emptyInput() == false) {
+      header('location: ../index.php?error=emptyInput');
+      exit();
+    }
+
+    if($this->invalidEmail() == false) {
+      header('location: ../index.php?error=invalidEmail');
+      exit();
+    }
+
+    if($this->pwdMatch() == false) {
+      header('location: ../index.php?error=pwdNotMatch');
+      exit();
+    }
+
+    if($this->uidTakenCheck() == false) {
+      header('location: ../index.php?error=usernameTaken');
+      exit();
+    }
+
+    $this->setUser($this->username, $this->email, $this->firstname, $this->lastname, $this->password);
   }
 
-  // LIST OF VALIDATIONS HERE:
+  private function emptyInput() {
+    $result = true;
+
+    if(empty($this->username) || empty($this->email) || empty($this->firstname) || empty($this->lastname)
+    || empty($this->password) || empty($this->repassword)) {
+      $result = false;
+    } 
+
+    return $result;
+  }
+
+  private function invalidEmail() {
+    $result = true;
+
+    if(!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
+      $result = false;
+    }
+
+    return $result;
+  }
+
+  private function pwdMatch() {
+    $result = true;
+
+    if($this->password !== $this->repassword) {
+      $result = false;
+    } 
+    
+    return $result;
+  }
+
+  private function uidTakenCheck() {
+    $result = true;
+
+    if(!$this->checkUser($this->username, $this->email)) {
+      $result = false;
+    } 
+
+    return $result;
+  }
 
 }
 
