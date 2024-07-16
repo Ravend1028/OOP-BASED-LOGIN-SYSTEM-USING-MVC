@@ -11,7 +11,7 @@
 
     public function loginUser() {
       if($this->emptyInput() == false) {
-        header('location: ../index.php?error=emptyInput');
+        header('location: ../views/loginForm.php?error=emptyInput');
         exit();
       }
 

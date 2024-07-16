@@ -19,22 +19,22 @@
 
     public function signupUser() {
       if($this->emptyInput() == false) {
-        header('location: ../index.php?error=emptyInput');
+        header('location: ../views/signupForm.php?error=emptyInput');
         exit();
       }
 
       if($this->invalidEmail() == false) {
-        header('location: ../index.php?error=invalidEmail');
+        header('location: ../views/signupForm.php?error=invalidEmail');
         exit();
       }
 
       if($this->pwdMatch() == false) {
-        header('location: ../index.php?error=pwdNotMatch');
+        header('location: ../views/signupForm.php?error=pwdNotMatch');
         exit();
       }
 
       if($this->uidTakenCheck() == false) {
-        header('location: ../index.php?error=usernameTaken');
+        header('location: ../views/signupForm.php?error=usernameTaken');
         exit();
       }
 

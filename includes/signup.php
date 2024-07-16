@@ -13,7 +13,7 @@
   $signupController = new SignupController($username, $email, $firstname, $lastname, $password, $repassword);
   $signupController->signupUser();
 
-  header('location: ../index.php?error=none');
+  header('location: ../views/signupForm.php?error=none');
   }
 
 ?>

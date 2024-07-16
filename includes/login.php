@@ -9,7 +9,7 @@
   $loginController = new LoginController($username, $password);
   $loginController->loginUser();
 
-  header('location: ../index.php?error=none');
+  header('location: ../views/landingPage.php');
   }
 
 ?>

@@ -2,17 +2,17 @@
 
   class LoginModel extends Database {
     protected function getUser($username, $password) {
-      $stmt = $this->connect()->prepare('SELECT password FROM users WHERE username = ?');
+      $stmt = $this->connect()->prepare('SELECT password FROM users WHERE username = ?;');
 
-      if(!$stmt->execute(array($username, $password))) {
+      if(!$stmt->execute(array($username))) {
         $stmt = null;
-        header('location: ../index.php?error=dataError');
+        header('location: ../views/loginForm.php?error=dataError');
         exit();
       } 
 
       if($stmt->rowCount() == 0) {
         $stmt = null;
-        header('location: ../index.php?error=userNotFound');
+        header('location: ../views/loginForm.php?error=userNotFound');
         exit();
       } 
 
@@ -21,30 +21,31 @@
 
       if($checkPwd == false) {
         $stmt = null;
-        header('location: ../index.php?error=wrongPassword');
+        header('location: ../views/loginForm.php?error=wrongPassword');
         exit();
       } elseif ($checkPwd == true) {
-        $stmt = $this->connect()->prepare('SELECT * FROM users WHERE username = ? AND password = ?;');
+        $stmt = $this->connect()->prepare('SELECT * FROM users WHERE username = ?;');
 
-        if(!$stmt->execute(array($username, $password))) {
+        if(!$stmt->execute(array($username))) {
           $stmt = null;
-          header('location: ../index.php?error=dataError');
+          header('location: ../views/loginForm.php?error=dataError');
           exit();
         } 
 
         if($stmt->rowCount() == 0) {
           $stmt = null;
-          header('location: ../index.php?error=userNotFound');
+          header('location: ../views/loginForm.php?error=userNotFound');
           exit();
         } 
 
         $user = $stmt->fetchAll();
         
         session_start();
-        $_SESSION['user'] = $user[0]['firstname'];
-      }
+        $_SESSION['user'] = $user[0]['first_name'];
 
-      $stmt = null;
+        $stmt = null;
+      }
+      
     }
   }
 

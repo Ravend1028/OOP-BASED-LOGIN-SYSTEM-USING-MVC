@@ -8,7 +8,7 @@
 
       if(!$stmt->execute(array($username, $email, $firstname, $lastname, $hashedPwd))) {
         $stmt = null;
-        header('location: ../index.php?error=dataError');
+        header('location: ../views/signupForm.php?error=dataError');
         exit();
       } 
 
@@ -20,7 +20,7 @@
 
       if(!$stmt->execute(array($username, $email))) {
         $stmt = null;
-        header('location: ../index.php?error=dataError');
+        header('location: ../views/signupForm.php?error=dataError');
         exit();
       } 
 
