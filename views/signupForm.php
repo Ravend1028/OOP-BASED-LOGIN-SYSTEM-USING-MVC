@@ -45,8 +45,10 @@
               </form>
 
               <hr>
-              <a href="loginForm.php">Already have an account</a>
-              
+
+              <div class="d-flex justify-content-center">
+                <a href="loginForm.php" >Login</a>
+              </div> 
             </div>
           </div>
 

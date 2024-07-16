@@ -23,6 +23,13 @@
 
                 <input type="submit" name="submit" value="Submit" class="btn btn-primary d-block mx-auto w-100">
               </form>
+
+              <hr>
+
+              <div class="d-flex flex-column justify-content-center align-items-center">
+                <a href="signupForm.php" class="mb-2">Forgot Password</a>
+                <a href="signupForm.php" >Sign Up</a>
+              </div> 
             </div>
           </div>
 
