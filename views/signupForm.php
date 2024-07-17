@@ -6,7 +6,7 @@
         <div class="col-12 col-sm-10 col-md-8 col-lg-6">
 
           <div class="card">
-            <img src="../images/cdm-view.jpg" class="card-img-top" alt="form-img">
+            <img src="../images/wallpaper.jpg" class="card-img-top" alt="form-img">
             <div class="card-body">
               <h3 class="card-title text-center mb-3">SIGN UP</h3>
 

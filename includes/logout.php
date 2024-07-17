@@ -6,4 +6,5 @@
 
   header('location: ../views/loginForm.php');
   exit();
+  
 ?>
