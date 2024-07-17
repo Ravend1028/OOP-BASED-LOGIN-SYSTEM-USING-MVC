@@ -27,7 +27,7 @@
               <hr>
 
               <div class="d-flex flex-column justify-content-center align-items-center">
-                <a href="signupForm.php" class="mb-2">Forgot Password</a>
+                <a href="forgotpassForm.php" class="mb-2">Forgot Password</a>
                 <a href="signupForm.php" >Sign Up</a>
               </div> 
             </div>

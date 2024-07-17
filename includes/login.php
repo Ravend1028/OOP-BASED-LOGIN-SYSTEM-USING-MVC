@@ -10,6 +10,7 @@
   $loginController->loginUser();
 
   header('location: ../views/landingPage.php');
+  exit();
   }
 
 ?>

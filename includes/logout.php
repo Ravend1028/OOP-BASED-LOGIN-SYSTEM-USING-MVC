@@ -5,5 +5,5 @@
   session_destroy();
 
   header('location: ../views/loginForm.php');
-
+  exit();
 ?>

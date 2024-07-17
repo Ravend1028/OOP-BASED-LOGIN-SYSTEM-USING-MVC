@@ -14,6 +14,7 @@
   $signupController->signupUser();
 
   header('location: ../views/signupForm.php?error=none');
+  exit();
   }
 
 ?>
