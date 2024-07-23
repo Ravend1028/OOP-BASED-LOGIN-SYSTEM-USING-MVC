@@ -41,7 +41,11 @@
                   <label for="floatingPassword">Retype Password</label>
                 </div>
 
-                <input type="submit" name="submit" value="Submit" class="btn btn-primary d-block mx-auto w-100">
+                <input type="submit" name="submit" value="Submit" class="btn btn-primary d-block mx-auto w-100 mb-4">
+
+                <div class="d-flex justify-content-center">
+                  <div class="g-recaptcha" data-sitekey="6LchdhYqAAAAAKAKZcyCjM8NtYSJEfIJUOdAhz_r"></div>
+                </div>
               </form>
 
               <hr>
