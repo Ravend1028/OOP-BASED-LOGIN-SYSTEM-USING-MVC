@@ -1,10 +1,10 @@
 <?php
 
   class ForgotpassModel extends Database {
-    protected function updatePassword($username, $email, $newPassword) {
-      $stmt = $this->connect()->prepare('SELECT * FROM users WHERE username = ? AND email = ?;');
+    protected function updatePassword($email, $newPassword) {
+      $stmt = $this->connect()->prepare('SELECT * FROM users WHERE email = ?;');
 
-      if(!$stmt->execute(array($username, $email))) {
+      if(!$stmt->execute(array($email))) {
         $stmt = null;
         header('location: ../views/forgotpassForm.php?error=dataError');
         exit();
@@ -17,9 +17,9 @@
       } 
 
       $hashedPwd = password_hash($newPassword, PASSWORD_DEFAULT);
-      $stmt = $this->connect()->prepare('UPDATE users SET password = ? WHERE username = ? AND email = ?;');
+      $stmt = $this->connect()->prepare('UPDATE users SET password = ? WHERE email = ?;');
 
-      if(!$stmt->execute(array($hashedPwd, $username, $email))) {
+      if(!$stmt->execute(array($hashedPwd, $email))) {
         header('location: ../views/forgotpassForm.php?error=updateError');
         exit();
       }

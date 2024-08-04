@@ -12,11 +12,6 @@
 
               <form class="form-floating" action="../includes/forgotpass.php" method="POST">
                 <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="floatingInput" name="username" placeholder="Username">
-                  <label for="floatingInput">Username</label>
-                </div>
-
-                <div class="form-floating mb-3">
                   <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com">
                   <label for="floatingInput">Email address</label>
                 </div>
@@ -26,6 +21,12 @@
                   <label for="floatingPassword">New Password</label>
                 </div>
 
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingOTP" name="otp" placeholder="OTP">
+                  <label for="floatingOTP">OTP</label>
+                </div>
+
+                <input type="submit" name="send_otp" value="Send OTP" class="btn btn-primary d-block mx-auto w-100 mb-3">
                 <input type="submit" name="submit" value="Submit" class="btn btn-primary d-block mx-auto w-100">
               </form>
 

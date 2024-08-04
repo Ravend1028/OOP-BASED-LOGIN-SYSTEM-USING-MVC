@@ -1,12 +1,10 @@
 <?php
 
   class ForgotpassController extends ForgotpassModel {
-    private $username;
     private $email;
     private $newPassword;
 
-    public function __construct($username, $email, $newPassword) {
-      $this->username = $username;
+    public function __construct($email, $newPassword) {
       $this->email = $email;
       $this->newPassword = $newPassword;
     }
@@ -22,13 +20,13 @@
         exit();
       }
 
-      $this->updatePassword($this->username, $this->email, $this->newPassword);
+      $this->updatePassword($this->email, $this->newPassword);
     }
 
     private function emptyInput() {
       $result = true;
 
-      if(empty($this->username) || empty($this->email) || empty($this->newPassword) ) {
+      if(empty($this->email) || empty($this->newPassword) ) {
         $result = false;
       } 
 
