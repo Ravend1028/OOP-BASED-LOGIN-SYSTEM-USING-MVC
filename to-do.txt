@@ -1,0 +1,2 @@
+- set up the environment varibale in the includes folder (sign up and forgot pass)
+- to hide the secret key and app key

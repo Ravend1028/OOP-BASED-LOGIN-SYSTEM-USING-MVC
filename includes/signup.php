@@ -1,9 +1,11 @@
 <?php include 'autoloader.php'; ?>
 
 <?php
+  require '../vendor/autoload.php';
+  //use Dotenv\Dotenv;
 
  if(isset($_POST['submit'])) {
-  $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+  $dotenv = Dotenv\Dotenv::createImmutable('../');
   $dotenv->load();
 
   $recaptcha_secret = getenv('SECRET_KEY');
