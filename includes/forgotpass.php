@@ -26,13 +26,18 @@
   
     //Create an instance; passing `true` enables exceptions
     $mail = new PHPMailer(true);
+
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+
+    $app_password = getenv('APP_PASSWORD');
   
     try {
       $mail->isSMTP();
       $mail->Host       = 'smtp.gmail.com';  // Replace with your SMTP server
       $mail->SMTPAuth   = true;
       $mail->Username   = 'ravendavid.rd30@gmail.com';  // Your email address
-      $mail->Password   = 'updj fkce eebc fgiz';  // Your email password or app-specific password
+      $mail->Password   = $app_password;  // Your email password or app-specific password
       $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
       $mail->Port       = 465;
   

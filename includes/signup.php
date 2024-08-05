@@ -3,7 +3,10 @@
 <?php
 
  if(isset($_POST['submit'])) {
-  $recaptcha_secret = '6LchdhYqAAAAADgcIMnm-UAVfYd89HbvKV58lKCI';
+  $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+  $dotenv->load();
+
+  $recaptcha_secret = getenv('SECRET_KEY');
   $recaptcha_response = $_POST['g-recaptcha-response'];
 
   // Make a POST request to the Google reCAPTCHA API
